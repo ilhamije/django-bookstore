@@ -28,7 +28,7 @@
 						</p> -->
 					{#% else %#}
 						<!-- <a class="navbar-text" href="{#% url 'login' %#}">login</a> -->
-					{% endif %}
+					{#% endif %#}
 				</div>
 			</div>
 		</nav>
@@ -40,8 +40,6 @@
 
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'js/main.js' %}"></script>
-	<script src="{% static 'js/numaps.js' %}"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDKIn12zb2p1K4_sFJq-Lr6i2Wx4_2SU8&callback=initMap"></script>
 	{% block javascript %}
 	{% endblock %}
 </body>
