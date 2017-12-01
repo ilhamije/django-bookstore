@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+  <div class="col-md-4 col-sm-6">
+    <!-- <form enctype="multipart/form-data" action="target/new/" method="post"> -->
+    <form enctype="multipart/form-data" action="/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="Submit"/>
+    </form>
+  </div>
+{% endblock %}

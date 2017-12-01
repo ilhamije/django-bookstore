@@ -1,0 +1,23 @@
+h1 {
+  color: green;
+}
+
+
+.navbar-brand
+{
+	position: absolute;
+	left: 50%;
+  	transform: translateX(-50%);
+    display: block;
+}
+
+.navbar-default {
+    position: relative;
+    min-height: 70px;
+    margin-bottom: 40px;
+    padding-bottom: 50px;
+}
+
+a:hover {
+  text-decoration: none;
+}

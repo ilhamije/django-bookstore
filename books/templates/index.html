@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+      {% for target in targets %}
+      <div class="col-md-4 col-sm-6">
+        <a href="/target/{{ target.id }}/">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">{{ target.nama }}</h2>
+              <small>{{ target.lapakcategory }} | {{ target.lokasi }}</small>
+
+                <!-- <a href="/user/{{ target.user.username }}"> -->
+                <!-- {{ target.user.username }}</a> -->
+              </div>
+
+            <div class="panel-body">
+              <!-- <img src="{{ target.image.url }}" alt="birds" class="thumbnail"> -->
+              <button id="likes" data-id="{{target.id}}"
+                type="button" class="btn btn-mini btn-danger fa fa-heart-o">
+                {% if target.likes > 0 %}
+                {{ target.likes }}
+                {% endif %}
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+{% endblock %}
