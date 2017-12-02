@@ -10,7 +10,9 @@
 
   <!-- button to trigger the action -->
   <p>
-    <button class="btn btn-primary js-create-book" type="button">
+    <button class="btn btn-primary js-create-book"
+            type="button"
+            data-url="{% url 'book_create' %}">
       <span class="glyphicon glyphicon-plus"></span>
       New
     </button>
