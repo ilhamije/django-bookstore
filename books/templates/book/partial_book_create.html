@@ -1,6 +1,6 @@
 {% load widget_tweaks %}
 
-<form class="" action="index.html" method="post">
+<form class="js-book-create-form" action="{% url 'book_create' %}" method="post">
   {% csrf_token %}
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="close">
