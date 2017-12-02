@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block javascript %}
+  <script type="text/javascript" src="{% static 'js/books.js' %}"></script>
+{% endblock %}
 
 {% block content %}
   <h1 class="page-header">Books</h1>
+
+  <!-- button to trigger the action -->
+  <p>
+    <button class="btn btn-primary js-create-book" type="button">
+      <span class="glyphicon glyphicon-plus"></span>
+      New
+    </button>
+  </p>
+
+  <!-- table 'book-table' begin -->
   <table class="table table-hover" id="book-table">
     <thead>
       <tr>
@@ -32,4 +47,13 @@
       {% endfor %}
     </tbody>
   </table>
+  <!-- table 'book-table' end -->
+
+  <!-- the modal we will be using -->
+  <div class="modal fade" id="modal-book">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+  </div>
 {% endblock %}
