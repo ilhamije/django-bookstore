@@ -4,9 +4,15 @@ from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
+from rest_framework import viewsets
 
 from .models import Book
 from .forms import BookForm
+from .serializers import BookSerializer
+
+class BookViewSet(viewsets.ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
 
 
 def book_list(request):
